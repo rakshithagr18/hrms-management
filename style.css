@@ -1,0 +1,188 @@
+/* Body & Fonts */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #f5f6fa;
+}
+
+/* Topbar */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 25px;
+  background: white;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.left i { margin-right: 10px; }
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.right i { margin: 0 10px; cursor: pointer; }
+
+.icon-wrapper { position: relative; display: inline-block; }
+
+.notification-dot {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  width: 8px; height: 8px;
+  background: red;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.top-profile { border-radius: 50%; margin-left: 10px; }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Left Card */
+.profile-card {
+  width: 300px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.profile-bg { height: 80px; background: #4a6cf7; }
+
+.profile-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.profile-img {
+  border-radius: 50%;
+  margin-top: -50px;
+  border: 4px solid white;
+}
+
+.name { margin: 10px 0 5px; }
+
+.role { color: gray; margin-bottom: 15px; }
+
+/* Left Sidebar Section Titles with Favicon */
+.profile-card .section-title {
+  display: flex;           /* Align icon and text horizontally */
+  align-items: center;     /* Vertically center icon and text */
+  font-size: 16px;
+  font-weight: 600;
+  margin: 15px 0 10px;
+  color: #555;
+  position: relative;
+  padding-left: 24px;      /* Space for favicon */
+}
+
+/* Favicon before title using pseudo-element */
+.profile-card .section-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Example: assign different favicons per section using nth-child */
+.profile-card .section-title:nth-of-type(1)::before {
+  background-image: url('favicon1.png'); /* Personal Info */
+}
+
+.profile-card .section-title:nth-of-type(2)::before {
+  background-image: url('favicon2.png'); /* Contact */
+}
+
+.profile-card .section-title:nth-of-type(3)::before {
+  background-image: url('favicon3.png'); /* Settings */
+}
+
+/* Sidebar Info stays vertical with bold titles */
+.profile-card .info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.profile-card .info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.profile-card .info-item .title {
+  font-size: 13px;
+  font-weight: 600; /* Bold titles */
+  color: #555;
+  margin-bottom: 2px;
+}
+
+.profile-card .info-item .value {
+  font-size: 15px;
+  font-weight: 400;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Right Section */
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Cards */
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Right Section Info: one item per line */
+.right-section .info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.right-section .info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right-section .info-item .title {
+  font-weight: 600;
+  color: #555;
+}
+
+.right-section .info-item .value {
+  font-size: 14px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Right Section Section title icon spacing */
+.section-title i {
+  margin-right: 8px;
+  color: #555;
+}
