@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>HRMS</h2>
+        <p>Employees</p>
+    </div>
+
+    <!-- Middle Profile Card -->
+    <div class="middle">
+        <div class="profile-card">
+            <img src="https://via.placeholder.com/120" class="profile-img">
+
+            <!-- Correct ID -->
+            <h2 id="empName"></h2>
+
+            <div>Email: <span id="email"></span></div>
+            <div>Phone: <span id="phone"></span></div>
+            <div>Nationality: <span id="nationality"></span></div>
+            <div>Gender: <span id="gender"></span></div>
+            <div>Age: <span id="age"></span></div>
+            <div>Status: <span id="status"></span></div>
+            <div>Type of Hire: <span id="hire"></span></div>
+        </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right">
+
+        <!-- Skills -->
+        <div class="box">
+            <h3>Skills</h3>
+
+            <select id="skillSelect">
+                <option>Java</option>
+                <option>Python</option>
+                <option>HTML</option>
+                <option>CSS</option>
+                <option>JavaScript</option>
+            </select>
+
+            <!-- Add button enabled -->
+            <button onclick="addSkill()">Add</button>
+
+            <ul id="skillList"></ul>
+        </div>
+
+        <!-- Address -->
+        <div class="box">
+            <h3>Address</h3>
+
+            <select id="addressSelect">
+                <option>Bangalore</option>
+                <option>Mysore</option>
+                <option>Hyderabad</option>
+                <option>Chennai</option>
+            </select>
+
+            <!-- Add button enabled -->
+            <button onclick="addAddress()">Add</button>
+
+            <ul id="addressList"></ul>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="profile.js"></script>
+
+</body>
+</html>

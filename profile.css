@@ -1,0 +1,180 @@
+/* 1. Global Reset & Layout */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fc;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* 2. Sidebar */
+.sidebar {
+    width: 220px;
+    background: #2f3640;
+    color: white;
+    padding: 25px;
+}
+
+.sidebar h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* 3. Middle Section (Card Placement) */
+.middle {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Centers card horizontally */
+    padding: 60px 20px;
+}
+
+.profile-card {
+    background: #ffffff;
+    width: 360px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    position: relative;
+    overflow: visible; /* CRITICAL: Allows photo to pop out the top */
+    text-align: center; /* Centers all text elements */
+    height: fit-content;
+}
+
+/* 4. The Blue Banner */
+.banner {
+    background-color: #4e73df;
+    height: 100px;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+/* 5. Header Content (Photo & Name) */
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+    margin: -50px auto 15px auto; /* Overlaps banner and centers */
+    display: block;
+    background-color: #d1d3e2;
+    object-fit: cover;
+}
+
+.user-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2e2f37;
+    margin-bottom: 5px;
+}
+
+.user-id {
+    font-size: 14px;
+    color: #858796;
+    margin-bottom: 5px;
+}
+
+.user-title {
+    font-size: 15px;
+    color: #b7b9cc;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* 6. Centered Information Rows */
+.details-section {
+    padding: 20px 30px 30px 30px;
+    border-top: 1px solid #edf0f5;
+}
+
+.section-title {
+    font-size: 13px;
+    font-weight: 800;
+    color: #4e73df;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center; /* Centers the icon and text header */
+    align-items: center;
+    gap: 8px;
+}
+
+.info-item {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Stacks label over value */
+    align-items: center;    /* Centers the stack */
+}
+
+.info-item label {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #b7b9cc;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.info-item .value {
+    font-size: 15px;
+    font-weight: 500;
+    color: #3a3b45;
+}
+
+/* Use this class for Email/Phone to make them stand out */
+.info-item .value.highlight {
+    color: #4e73df;
+}
+
+/* 7. Right Side Widgets */
+.right {
+    width: 320px;
+    padding: 60px 30px;
+}
+
+.box {
+    background: white;
+    border: 1px solid #e3e6f0;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.box h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+select, button {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #d1d3e2;
+    outline: none;
+}
+
+button {
+    background: #f8f9fc;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #4e73df;
+    color: white;
+}

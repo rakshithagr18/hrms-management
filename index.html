@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <title>HRMS</title>
+    <title>HRMS - Employees</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class = "container">
+<div class="container">
 
+    <!-- Left Sidebar -->
     <div class="sidebar">
-      <h2>HRMS</h2>
-      <p>Employees</p>
+        <h2>HRMS</h2>
+        <p>Employees</p>
     </div>
 
+    <!-- Right Content -->
     <div class="content">
 
-      <div class="top-bar">
-      <div onclick="sortName()">Employee Name ▼</div>
-      <div onclick="sortDate()">Date ▼</div>
-    </div>
+        <!-- Header Row -->
+        <div class="top-bar">
+            <div onclick="sortName()">Employee Name ▼</div>
+            <div onclick="sortDate()">Date ▼</div>
+        </div>
 
-    <table id="employeeTable">
-      <tbody></tbody>
-    </table>
-  </div>
+        <!-- Employee Table -->
+        <table id="employeeTable">
+            <tbody id="employeeBody"></tbody>
+        </table>
+
+    </div>
 
 </div>
 

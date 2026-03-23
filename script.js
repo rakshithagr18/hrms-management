@@ -1,44 +1,137 @@
 let employees = [
-    { name: "kiran", doj: "01/01/2025" },
-    { name: "vishnu", doj: "20/01/2020" },            
-    { name: "prajwal", doj: "31/01/2002" },
-    { name: "Rakshitha", doj: "04/10/2008" },
-    { name: "Sujatha", doj: "10/10/2000" }
+
+{
+name:"Kiran",
+date:"01/01/2025",
+email:"kiran@gmail.com",
+phone:"9876543211",
+nationality:"Indian",
+gender:"Male",
+age:25,
+status:"Active",
+hire:"Full-time"
+},
+
+{
+name:"Vishnu",
+date:"20/07/2020",
+email:"vishnu@gmail.com",
+phone:"9876543212",
+nationality:"Indian",
+gender:"Male",
+age:28,
+status:"Active",
+hire:"Full-time"
+},
+
+{
+name:"Prajwal",
+date:"31/01/2002",
+email:"prajwal@gmail.com",
+phone:"9876543212",
+nationality:"Indian",
+gender:"Male",
+age:26,
+status:"Active",
+hire:"Full-time"
+},
+
+{
+name:"Sujatha",
+date:"10/10/2000",
+email:"sujatha@gmail.com",
+phone:"9876543213",
+nationality:"Indian",
+gender:"Female",
+age:29,
+status:"Active",
+hire:"Full-time"
+},
+
+{
+name:"Rakshitha",
+date:"04/10/2008",
+email:"rakshitha@gmail.com",
+phone:"9876543210",
+nationality:"Indian",
+gender:"Female",
+age:23,
+status:"Active",
+hire:"Full-time"
+}
+
 ];
 
-let nameToggle = true;
-let dateToggle = true;
+let nameAsc = true;
+let dateAsc = true;
 
-function loadTable() {
-    let tableBody = document.querySelector("#employeeTable tbody"); 
-    tableBody.innerHTML = "";
-    
-    employees.forEach(employee => {
-        let row = tableBody.insertRow();
-        row.insertCell(0).textContent = employee.name;
-        row.insertCell(1).textContent = employee.doj;
-    });
+function loadEmployees(){
+
+let table = document.getElementById("employeeBody");
+table.innerHTML = "";
+
+employees.forEach(emp => {
+
+let row = document.createElement("tr");
+
+row.innerHTML = `
+<td>${emp.name}</td>
+<td>${emp.date}</td>
+`;
+
+row.onclick = function(){
+
+localStorage.setItem("employeeData", JSON.stringify(emp));
+window.location.href = "profile.html";
+
+};
+
+table.appendChild(row);
+
+});
+
 }
 
-// Main button click
-function sortName() {
-    if (nameToggle) {
-        employees.sort((a, b) => a.name.localeCompare(b.name));
-    } else {
-        employees.sort((a, b) => b.name.localeCompare(a.name));
-    }
-    nameToggle = !nameToggle;   
-    loadTable();
+
+// Sort by Name
+function sortName(){
+
+if(nameAsc){
+
+employees.sort((a,b)=>a.name.localeCompare(b.name));
+
+}else{
+
+employees.sort((a,b)=>b.name.localeCompare(a.name));
+
 }
 
-function sortDate() {
-    employees.sort((a, b) => {
-        let d1 = new Date(a.doj.split("/").reverse().join("-"));
-        let d2 = new Date(b.doj.split("/").reverse().join("-"));
-        return dateToggle ? d1 - d2 : d2 - d1;
-    });
-    dateToggle = !dateToggle;
-    loadTable();
+nameAsc = !nameAsc;
+
+loadEmployees();
+
 }
 
-loadTable();
+
+// Sort by Date
+function sortDate(){
+
+if(dateAsc){
+
+employees.sort((a,b)=>new Date(a.date) - new Date(b.date));
+
+}else{
+
+employees.sort((a,b)=>new Date(b.date) - new Date(a.date));
+
+}
+
+dateAsc = !dateAsc;
+
+loadEmployees();
+
+}
+
+
+// Load employees first time
+loadEmployees();
