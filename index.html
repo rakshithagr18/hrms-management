@@ -3,176 +3,142 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Employee Profile</title>
 
-<!-- Favicon -->
-<link rel="icon" type="image/png" href="favicon.png">
+<title>HRMS Dashboard</title>
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<!-- Font Awesome -->
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<!-- Custom CSS -->
+<!-- CSS -->
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="main">
+<div class="wrapper">
 
-  <!-- Topbar -->
-  <div class="topbar">
-    <div class="left">
-      <i class="fa fa-bars"></i>
-      <span>Employees / Employee Profile</span>
-    </div>
-
-    <div class="right">
-      <i class="fa fa-search"></i>
-      <div class="icon-wrapper">
-        <i class="fa fa-bell"></i>
-        <span class="notification-dot"></span>
-      </div>
-      <img src="https://i.pravatar.cc/40" class="top-profile">
-    </div>
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h3>HRMS</h3>
+    <ul>
+      <li>Home</li>
+      <li>Employees</li>
+    </ul>
   </div>
 
-  <div class="container">
+  <!-- MAIN -->
+  <div class="main">
 
-    <!-- LEFT PROFILE -->
-    <div class="profile-card">
-      <div class="profile-bg"></div>
-
-      <div class="profile-content">
-        <img src="https://i.pravatar.cc/100" class="profile-img">
-
-        <h2 class="name">George Arafat</h2>
-
-        <p class="id">
-          <span class="emp-id">84739234</span>
-          <i class="fa fa-copy copy-icon" title="Copy ID"></i>
-        </p>
-
-        <p class="role">Junior Technician</p>
-
-        <h4 class="section-title">
-          <i class="fa fa-user"></i> Basic Information
-        </h4>
-
-        <div class="info">
-          <div class="info-item">
-            <span class="title">Email</span>
-            <span class="value"><i class="fa fa-envelope"></i> hello@gmail.com</span>
-          </div>
-
-          <div class="info-item">
-            <span class="title">Mobile Phone</span>
-            <span class="value"><i class="fa fa-phone"></i> +91 9876543210</span>
-          </div>
-
-          <div class="info-item">
-            <span class="title">Nationality</span>
-            <span class="value"><i class="fa fa-flag"></i> India</span>
-          </div>
-
-          <div class="info-item">
-            <span class="title">Gender</span>
-            <span class="value"><i class="fa fa-user"></i> Male</span>
-          </div>
-
-          <div class="info-item">
-            <span class="title">Age</span>
-            <span class="value"><i class="fa fa-calendar"></i> 32</span>
-          </div>
-
-          <div class="info-item">
-            <span class="title">Status</span>
-            <span class="value"><i class="fa fa-circle-check"></i> Active</span>
-          </div>
-
-          <div class="info-item">
-            <span class="title">Type of Hire</span>
-            <span class="value"><i class="fa fa-briefcase"></i> Full Time in House</span>
-          </div>
-        </div>
-      </div>
+    <!-- TOPBAR -->
+    <div class="topbar">
+      Employees / Employee Profile
     </div>
 
-    <!-- RIGHT SECTION -->
-    <div class="right-section">
+    <!-- DASHBOARD -->
+    <div class="dashboard">
 
-      <!-- Professional Information -->
-      <div class="card">
-        <h4 class="section-title">
-          <i class="fa fa-briefcase"></i> Professional Information
-        </h4>
+      <!-- LEFT PROFILE -->
+      <div class="profile-card">
+        <div class="profile-bg"></div>
 
-        <div class="info">
-          <div class="info-item">
-            <span class="title">Level of Education</span>
-            <span class="value">Higher Education</span>
-          </div>
+        <div class="profile-content">
+          <img id="empImg" src="https://i.pravatar.cc/100?img=12" class="profile-img">
 
-          <div class="info-item">
-            <span class="title">Degree</span>
-            <span class="value">Engineering</span>
-          </div>
+          <h2 id="empName">George Arafat</h2>
+          <p id="empId">84739234</p>
+          <p id="empRole">Junior Technician</p>
 
-          <div class="info-item">
-            <span class="title">Hard Skill</span>
-            <span class="value">Technical Support</span>
-          </div>
+          <h4 class="section-title">Basic Information</h4>
 
-          <div class="info-item">
-            <span class="title">Soft Skill</span>
-            <span class="value">Communication</span>
+          <div class="info">
+            <p>Email: <span id="empEmail">hello@gmail.com</span></p>
+            <p>Phone: <span id="empPhone">+91 9876543210</span></p>
+            <p>Nationality: <span id="empCountry">India</span></p>
+            <p>Gender: <span id="empGender">Male</span></p>
+            <p>Age: <span id="empAge">32</span></p>
+            <p>Status: Active</p>
+            <p>Type: Full Time</p>
           </div>
         </div>
       </div>
 
-      <!-- Home Address -->
-      <div class="card">
-        <h4 class="section-title">
-          <i class="fa fa-home"></i> Home Address
-        </h4>
+      <!-- RIGHT SECTION -->
+      <div class="right">
 
-        <div class="info">
-          <div class="info-item">
-            <span class="title">Address</span>
-            <span class="value">729 Luxury House King's Garden</span>
-          </div>
+        <!-- PROFESSIONAL INFO -->
+        <div class="card">
+          <h3 class="card-title">Professional Information</h3>
 
-          <div class="info-item">
-            <span class="title">Address (cont.)</span>
-            <span class="value">-</span>
-          </div>
-
-          <div class="info-item">
-            <span class="title">City</span>
-            <span class="value">Garden City</span>
-          </div>
-
-          <div class="info-item">
-            <span class="title">Postal Code</span>
-            <span class="value">43203</span>
-          </div>
+          <div class="row"><span>Education</span><span id="empEducation">Higher Education</span></div>
+          <div class="row"><span>Degree</span><span id="empDegree">Engineering</span></div>
+          <div class="row"><span>Skill</span><span id="empSkill">Technical Support</span></div>
+          <div class="row"><span>Soft Skill</span><span id="empSoftSkill">Communication</span></div>
         </div>
-      </div>
 
-      <!-- Tax Information -->
-      <div class="card">
-        <h4 class="section-title">
-          <i class="fa fa-file-invoice-dollar"></i> Tax Information
-        </h4>
+        <!-- HOME DASHBOARD -->
+        <div class="card">
 
-        <div class="info">
-          <div class="info-item">
-            <span class="title">Tax Number</span>
-            <span class="value">93838403</span>
+          <!-- HEADER -->
+          <div class="card-header">
+            <h3>Employee Dashboard</h3>
+
+            <div class="sort-buttons">
+              <button onclick="sortByName()">Name ↑↓</button>
+            </div>
           </div>
+
+          <!-- EMPLOYEE LIST -->
+          <div class="employee-list">
+            <div onclick="selectEmployee(0)">Rakshitha</div>
+            <div onclick="selectEmployee(1)">Rahul</div>
+            <div onclick="selectEmployee(2)">Ankit</div>
+          </div>
+
+          <!-- DETAILS -->
+          <div class="employee-details">
+            <h4>Employee Details</h4>
+
+            <div class="row">
+              <span>Name</span>
+              <span>Rakshitha</span>
+            </div>
+
+            <div class="row">
+              <span>Joining Date</span>
+              <span>2024-04-24</span>
+            </div>
+
+            <div class="row">
+              <span>Name</span>
+              <span>Rahul</span>
+            </div>
+
+            <div class="row">
+              <span>Joining Date</span>
+              <span>2023-06-10</span>
+            </div>
+
+          </div>
+
         </div>
+
+        <!-- ADDRESS -->
+        <div class="card">
+          <h3 class="card-title">Home Address</h3>
+
+          <div class="row"><span>Address</span><span id="empAddress">Bangalore</span></div>
+          <div class="row"><span>City</span><span id="empCity">Bangalore</span></div>
+          <div class="row"><span>Postal</span><span id="empPostal">560001</span></div>
+        </div>
+
+        <!-- TAX -->
+        <div class="card">
+          <h3 class="card-title">Tax Information</h3>
+
+          <div class="row"><span>Tax Number</span><span id="empTax">123456</span></div>
+        </div>
+
       </div>
 
     </div>
@@ -180,6 +146,9 @@
   </div>
 
 </div>
+
+<!-- JS -->
+<script src="script.js"></script>
 
 </body>
 </html>

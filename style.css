@@ -1,188 +1,190 @@
-/* Body & Fonts */
+/* BODY */
 body {
-  font-family: 'Poppins', sans-serif;
   margin: 0;
+  font-family: 'Poppins', sans-serif;
   background: #f5f6fa;
 }
 
-/* Topbar */
-.topbar {
+/* WRAPPER */
+.wrapper {
   display: flex;
-  justify-content: space-between;
-  padding: 15px 25px;
-  background: white;
-  align-items: center;
-  border-bottom: 1px solid #ddd;
+  min-height: 100vh;
 }
 
-.left i { margin-right: 10px; }
-
-.right {
-  display: flex;
-  align-items: center;
+/* SIDEBAR */
+.sidebar {
+  width: 220px;
+  background: linear-gradient(180deg, #2c3e50, #4a6cf7);
+  color: white;
+  padding: 20px 0;
 }
 
-.right i { margin: 0 10px; cursor: pointer; }
-
-.icon-wrapper { position: relative; display: inline-block; }
-
-.notification-dot {
-  position: absolute;
-  top: 0;
-  right: 5px;
-  width: 8px; height: 8px;
-  background: red;
-  border-radius: 50%;
-  border: 2px solid white;
+.sidebar h3 {
+  padding: 0 20px;
+  margin-bottom: 20px;
 }
 
-.top-profile { border-radius: 50%; margin-left: 10px; }
+.sidebar ul {
+  padding: 0;
+  margin: 0;
+}
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+.sidebar li {
+  list-style: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar li:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+}
+
+/* MAIN */
+.main {
+  flex: 1;
   padding: 20px;
 }
 
-/* Left Card */
+/* TOPBAR */
+.topbar {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* DASHBOARD */
+.dashboard {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* PROFILE CARD */
 .profile-card {
   width: 300px;
   background: white;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
   flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-.profile-bg { height: 80px; background: #4a6cf7; }
+.profile-bg {
+  height: 100px;
+  background: #4a6cf7;
+}
 
 .profile-content {
-  padding: 20px;
   text-align: center;
+  padding: 20px;
 }
 
 .profile-img {
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   margin-top: -50px;
   border: 4px solid white;
+  object-fit: cover;
 }
 
-.name { margin: 10px 0 5px; }
-
-.role { color: gray; margin-bottom: 15px; }
-
-/* Left Sidebar Section Titles with Favicon */
-.profile-card .section-title {
-  display: flex;           /* Align icon and text horizontally */
-  align-items: center;     /* Vertically center icon and text */
-  font-size: 16px;
-  font-weight: 600;
-  margin: 15px 0 10px;
-  color: #555;
-  position: relative;
-  padding-left: 24px;      /* Space for favicon */
+.profile-content h2 {
+  margin: 10px 0 5px;
 }
 
-/* Favicon before title using pseudo-element */
-.profile-card .section-title::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 16px;
-  height: 16px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+.profile-content p {
+  margin: 5px 0;
+  color: gray;
 }
 
-/* Example: assign different favicons per section using nth-child */
-.profile-card .section-title:nth-of-type(1)::before {
-  background-image: url('favicon1.png'); /* Personal Info */
-}
-
-.profile-card .section-title:nth-of-type(2)::before {
-  background-image: url('favicon2.png'); /* Contact */
-}
-
-.profile-card .section-title:nth-of-type(3)::before {
-  background-image: url('favicon3.png'); /* Settings */
-}
-
-/* Sidebar Info stays vertical with bold titles */
-.profile-card .info {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.profile-card .info-item {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.profile-card .info-item .title {
-  font-size: 13px;
-  font-weight: 600; /* Bold titles */
-  color: #555;
-  margin-bottom: 2px;
-}
-
-.profile-card .info-item .value {
-  font-size: 15px;
-  font-weight: 400;
-  color: #333;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-/* Right Section */
-.right-section {
+/* RIGHT SECTION */
+.right {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-/* Cards */
+/* CARD */
 .card {
   background: white;
-  border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* Right Section Info: one item per line */
-.right-section .info {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+/* CARD TITLE */
+.card h3 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
-.right-section .info-item {
+/* ROW (IMPORTANT FIX) */
+.row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
 }
 
-.right-section .info-item .title {
-  font-weight: 600;
+.row:last-child {
+  border-bottom: none;
+}
+
+.row span:first-child {
   color: #555;
+  font-weight: 500;
 }
 
-.right-section .info-item .value {
-  font-size: 14px;
-  color: #333;
+.row span:last-child {
+  color: #222;
+}
+
+/* EMPLOYEE LIST */
+.employee-list {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.employee-list div {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.employee-list div:last-child {
+  border-bottom: none;
+}
+
+.employee-list div:hover {
+  background: #f0f2f7;
+}
+
+/* SORT BUTTONS */
+.sort-buttons {
   display: flex;
-  align-items: center;
-  gap: 6px;
+  gap: 10px;
 }
 
-/* Right Section Section title icon spacing */
-.section-title i {
-  margin-right: 8px;
-  color: #555;
+.sort-buttons button {
+  padding: 6px 12px;
+  border: none;
+  background: #4a6cf7;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.sort-buttons button:hover {
+  background: #3a5bdc;
+}
+
+/* INFO TEXT */
+.info p {
+  margin: 8px 0;
+  font-size: 14px;
 }
