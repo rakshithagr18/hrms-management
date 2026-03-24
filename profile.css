@@ -21,7 +21,7 @@ body {
     width: 220px;
     background: #2f3640;
     color: white;
-    padding: 25px;
+    padding: 30px;
 }
 
 .sidebar h2 {
@@ -31,69 +31,72 @@ body {
 
 /* 3. Middle Section (Card Placement) */
 .middle {
-    flex: 1;
+    flex: 3;
     display: flex;
-    justify-content: center; /* Centers card horizontally */
+    justify-content: center;
     padding: 60px 20px;
 }
 
+/* 4. Profile Card */
 .profile-card {
     background: #ffffff;
-    width: 360px;
+    width: 450px; /* Increased width */
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     position: relative;
-    overflow: visible; /* CRITICAL: Allows photo to pop out the top */
-    text-align: center; /* Centers all text elements */
-    height: fit-content;
+    overflow: visible;
+    text-align: center;
+    padding-bottom: 20px;
 }
 
-/* 4. The Blue Banner */
+/* 5. The Blue Banner */
 .banner {
     background-color: #4e73df;
-    height: 100px;
+    height: 110px;
     width: 100%;
     border-radius: 15px 15px 0 0;
 }
 
-/* 5. Header Content (Photo & Name) */
+/* 6. Profile Image */
 .profile-img {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     border: 5px solid #ffffff;
-    margin: -50px auto 15px auto; /* Overlaps banner and centers */
+    margin: -55px auto 15px auto; /* overlap effect */
     display: block;
     background-color: #d1d3e2;
     object-fit: cover;
 }
 
+/* 7. User Info */
 .user-name {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 30px;
+    font-weight: 800;
     color: #2e2f37;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .user-id {
     font-size: 14px;
     color: #858796;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .user-title {
-    font-size: 15px;
+    font-size: 20px;
     color: #b7b9cc;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
-/* 6. Centered Information Rows */
+/* 8. Details Section */
 .details-section {
-    padding: 20px 30px 30px 30px;
+    padding: 30px 40px 40px 40px;
     border-top: 1px solid #edf0f5;
 }
 
+/* Section Header */
 .section-title {
     font-size: 13px;
     font-weight: 800;
@@ -101,39 +104,49 @@ body {
     text-transform: uppercase;
     margin-bottom: 25px;
     display: flex;
-    justify-content: center; /* Centers the icon and text header */
+    justify-content: center;
     align-items: center;
     gap: 8px;
 }
 
+/* 9. Info Items */
 .info-item {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     display: flex;
-    flex-direction: column; /* Stacks label over value */
-    align-items: center;    /* Centers the stack */
+    flex-direction: column; /* stack label + value */
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #edf0f5;
 }
 
+.info-item:last-child {
+    border-bottom: none;
+}
+
+/* Label */
 .info-item label {
     font-size: 11px;
     text-transform: uppercase;
     color: #b7b9cc;
     font-weight: 800;
-    letter-spacing: 1px;
-    margin-bottom: 4px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
 }
 
+/* Value */
 .info-item .value {
     font-size: 15px;
     font-weight: 500;
     color: #3a3b45;
+    line-height: 1.6;
 }
 
-/* Use this class for Email/Phone to make them stand out */
+/* Highlight (Email/Phone) */
 .info-item .value.highlight {
     color: #4e73df;
 }
 
-/* 7. Right Side Widgets */
+/* 10. Right Side Widgets */
 .right {
     width: 320px;
     padding: 60px 30px;
