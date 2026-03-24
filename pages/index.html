@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HRMS - Employees</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="sidebar">
+        <h2>HRMS</h2>
+        <a href="index.html">Employees</a>
+    </div>
+
+    <div class="content">
+        <h2>Employee List</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th onclick="sortName()">Employee Name ▼</th>
+                    <th onclick="sortDate()">Date ▼</th>
+                </tr>
+            </thead>
+
+            <tbody id="employeeBody"></tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="../js/data.js"></script>
+<script src="../js/script.js"></script>
+
+</body>
+</html>
